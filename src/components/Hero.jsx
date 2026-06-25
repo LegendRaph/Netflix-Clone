@@ -55,7 +55,7 @@ function Hero() {
 
     const interval = setInterval(() => {
       setCount((prev) => (prev + 1) % image.length);
-    }, 3000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [heroImage]);
