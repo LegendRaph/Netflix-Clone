@@ -12,13 +12,20 @@ import info from "../assets/info.svg";
 function Hero() {
   const [heroImage, setHeroimage] = useState([]);
   const [count, setCount] = useState(0);
-  const [image, setImage] = useState([
+  const image = [
     "/wMrV8SLne1jHLeYS0lLrA1Tf86P.jpg",
     "/dd31qJxOarrHyGZwYsCzOjobQzP.jpg",
     "/qO55CD8tgVL1T4WKn6zYFFiD6lL.jpg",
     "/9Z2uDYXqJrlmePznQQJhL6d92Rq.jpg",
     "/afHAM9qOTmrVDeaLIU7zfssotUY.jpg",
-  ]);
+  ];
+  const desc = [
+    "The young daughter of a journalist disappears into the desert without a trace—eight years later, the broken family is shocked when she is returned to them, as what should be a joyful reunion turns into a living nightmare.",
+    "Jack Ryan is reluctantly pulled back into espionage when an international covert mission unravels a deadly conspiracy. Racing against time, he joins CIA allies Mike November & James Greer and sharp MI6 officer Emma Marlowe to battle a rogue black-ops unit in a high-stakes, deeply personal fight.",
+    "As Frank Castle searches for meaning beyond revenge, an unexpected force pulls him back into the fight.",
+    "Having thwarted Bowser's previous plot to marry Princess Peach, Mario and Luigi now face a fresh threat in Bowser Jr., who is determined to liberate his father from captivity and restore the family legacy. Alongside companions new and old, the brothers travel across the stars to stop the young heir's crusade.",
+    "Science teacher Ryland Grace wakes up on a spaceship light years from home with no recollection of who he is or how he got there. As his memory returns, he begins to uncover his mission: solve the riddle of the mysterious substance causing the sun to die out. He must call on his scientific knowledge and unorthodox ideas to save everything on Earth from extinction.",
+  ];
   const [poster, setPoster] = useState([
     poster_text1,
     poster_text2,
@@ -62,7 +69,7 @@ function Hero() {
       <div className="ml-7 lg:ml-20 absolute top-50">
         <img src={poster[count]} className="w-40 h-25 lg:w-90 lg:h-40 mb-5" />
         <h1 className="text-white hidden lg:block lg:w-170 font-semibold">
-          {description[count]}
+          {desc[count]}
         </h1>
         <div className="flex gap-4 mt-5">
           <button className="text-black w-20 h-8 lg:w-27 lg:h-10 bg-white rounded-sm font-semibold flex items-center pl-2 lg:pl-4 pr-3 hover:scale-105 duration-250">
